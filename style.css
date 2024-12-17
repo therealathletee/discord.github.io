@@ -1,0 +1,156 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(0, 0, 0, 0.8); /* Opaque background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    padding: 2rem;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+/* Text Section */
+.text-content {
+    text-align: left;
+    flex: 1 1 300px;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ff9ee6;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #ffd1e3;
+    margin-bottom: 20px;
+}
+
+/* Kawaii Join Button */
+.join-button {
+    display: inline-block;
+    background-color: #ff9ee6; /* Kawaii pink */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly bigger font */
+    font-weight: 700;
+    padding: 12px 40px; /* Bigger horizontally */
+    border: 3px solid #ffd1e3; /* Soft light pink border */
+    border-radius: 50px; /* Rounded edges */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 12px 4px rgba(255, 158, 230, 0.6); /* Pink glow effect */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    animation: kawaii-wiggle 2s infinite ease-in-out;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.join-button:hover {
+    transform: scale(1.05); /* Subtle enlargement */
+    box-shadow: 0 0 20px 8px rgba(255, 158, 230, 0.8);
+    background-color: #ffa8e8; /* Slightly brighter pink */
+}
+
+/* Cute Animation Wiggle */
+@keyframes kawaii-wiggle {
+    0%, 100% {
+        transform: rotate(-1deg);
+    }
+    50% {
+        transform: rotate(1deg);
+    }
+}
+
+/* Centering the Button */
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align everything to the center horizontally */
+    justify-content: center;
+}
+
+
+/* Custom Widget */
+.custom-widget {
+    flex: 1 1 300px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #ff9ee6;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px rgba(255, 158, 230, 0.6);
+    padding: 1rem;
+    text-align: center;
+}
+
+.widget-title {
+    font-size: 1.5rem;
+    color: #ffd1e3;
+    margin-bottom: 1rem;
+}
+
+.members-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.members-list li {
+    padding: 10px;
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ffd1e3;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content, .custom-widget {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+    }
+}
